@@ -24,6 +24,8 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Use Devise for user authentication
 gem 'devise'
+# Install Cloudinary
+gem 'cloudinary'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

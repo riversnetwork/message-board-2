@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dwvvtdtwx
+  api_key: '252836825697289'
+  api_secret: ucZk3R9N2InA0seYFnCAUQ2gr2o
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dwvvtdtwx
+  api_key: '252836825697289'
+  api_secret: ucZk3R9N2InA0seYFnCAUQ2gr2o
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dwvvtdtwx
+  api_key: '252836825697289'
+  api_secret: ucZk3R9N2InA0seYFnCAUQ2gr2o
+  enhance_image_tag: true
+  static_image_support: false
