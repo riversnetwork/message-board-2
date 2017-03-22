@@ -1,0 +1,11 @@
+<p><%= comment.content%></p>
+<p>Posted by <%= "#{comment.user.first_name} #{comment.user.last_name}" %>
+<br><%= comment.created_at.strftime("%A, %B %d, %Y at %r") %></p>
+
+<% if user_signed_in? %>
+  <% if comment.user_id == current_user.id %>
+    <%= link_to "Edit Comment", edit_post_comment_path(comment.post_id, comment), class: "btn btn-success btn-sm" %>
+    <%= link_to "Delete Comment", post_comment_path(comment.post_id, comment), method: :delete, data: { confirm: "Delete this comment?" }, class: "btn btn-danger btn-sm" %>
+  <% end %>
+<% end %>
+<hr>

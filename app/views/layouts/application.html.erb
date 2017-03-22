@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MessageBoard</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class='container'>
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <%= link_to "BK Code Project", root_path, class: "navbar-brand" %>
+	    </div>
+     
+	    <div class="collapse navbar-collapse" id="main-nav-collapse">
+	      <ul class="nav navbar-nav navbar-right">
+	        <% if user_signed_in? %>
+						<li><%= link_to "New Post", new_post_path %></li>
+					  <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+						<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+					<% else %>
+					  <li><%= link_to "Sign Up", new_user_registration_path %></li>
+						<li><%= link_to "Log In", new_user_session_path %></li>
+					<% end %>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div>
+	</nav>
+	
+  <div class="container">
+    
+    <%= flash_messages %>
+  
+    <%= yield %>
+
+  </div>
+	
+</body>
+</html>
