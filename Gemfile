@@ -25,7 +25,9 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Use Devise for user authentication
 gem 'devise'
 # Install Cloudinary
-gem 'cloudinary'
+gem 'cloudinary', '~> 1.0.24'
+# Install Attachinary
+gem 'attachinary'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
