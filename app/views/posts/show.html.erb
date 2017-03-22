@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
-    <div class="well"> 
+    <div class="well">
+      <%= cl_image_tag(@post.user.profile_photo.path, { size: '50x50', crop: :thumb, gravity: :face }) %> 
       <h2><%= @post.title %></h2>
       <hr>
       <p><%= @post.body %></p>

@@ -1,3 +1,4 @@
+<%= cl_image_tag(comment.user.profile_photo.path, { size: '50x50', crop: :thumb, gravity: :face }) %>
 <p><%= comment.content%></p>
 <p>Posted by <%= "#{comment.user.first_name} #{comment.user.last_name}" %>
 <br><%= comment.created_at.strftime("%A, %B %d, %Y at %r") %></p>
